@@ -13,3 +13,15 @@ NEWSPIDER_MODULE = 'BeerGeek.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'BeerGeek (+http://www.yourdomain.com)'
+
+SPIDER_MIDDLEWARES = {
+    'scrapy.contrib.spidermiddleware.depth.DepthMiddleware': 200,
+    'scrapy.contrib.spidermiddleware.referer.RefererMiddleware': 150
+}
+
+DEPTH_STATS_VERBOSE = True
+CONCURRENT_REQUESTS = 100
+DOWNLOAD_TIMEOUT = 15
+LOG_LEVEL = 'INFO'
+RETRY_ENABLED = False
+DEPTH_LIMIT = 20
