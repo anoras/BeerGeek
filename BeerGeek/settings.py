@@ -15,6 +15,7 @@ NEWSPIDER_MODULE = 'BeerGeek.spiders'
 #USER_AGENT = 'BeerGeek (+http://www.yourdomain.com)'
 
 SPIDER_MIDDLEWARES = {
+    'scrapy.contrib.spidermiddleware.offsite.OffsiteMiddleware' : 100,
     'scrapy.contrib.spidermiddleware.depth.DepthMiddleware': 200,
     'scrapy.contrib.spidermiddleware.referer.RefererMiddleware': 150
 }

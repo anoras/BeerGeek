@@ -11,3 +11,4 @@ class BeerReviewPage(Item):
     depth = Field()
     filename = Field()
     link_text = Field()
+    title = Field()
