@@ -10,5 +10,4 @@ class BeerReviewPage(Item):
     body = Field()
     depth = Field()
     filename = Field()
-    crawl_time = Field()
     link_text = Field()
