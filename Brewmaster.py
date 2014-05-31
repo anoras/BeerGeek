@@ -52,31 +52,38 @@ with open('data/beer-review-pages.json', 'r') as f:
                 sentence_kind = raw_input(sentence)
                 if sentence_kind == 'r':
                     classifications.append((features, 'review'))
+                    classification_training.append((features, 'review'))
                 elif sentence_kind == 'd':
                     classifications.append((features, 'description'))
+                    classification_training.append((features, 'description'))
                 elif sentence_kind == 'o':
                     classifications.append((features, 'other'))
+                    classification_training.append((features, 'other'))
                 elif sentence_kind == 'q':
                     save_classifcations()
                     exit()
                 else:
                     pass
 
-            sentiments = []
-            for classification in classifications:
-                if classification[1] == 'review':
-                    sentiments.append(classification[0])
-                classification_training.append(classification)
-
-            review = raw_input(colored("Was this review positive (+), negative (-) or netural (n)?", color='yellow'))
+            review = raw_input(colored("Was this review positive (+), negative (-) or netural (n)? Or should I skip it (s)?", color='yellow'))
+            review_sentiment = ""
             if review == '+':
-                sentiment_training.append((sentiments, 'positive'))
+                review_sentiment = "positive"
             elif review == '-':
-                sentiment_training.append((sentiments, 'negative'))
+                review_sentiment = "negative"
             elif review == 'n':
-                sentiment_training.append((sentiments, 'neutral'))
+                review_sentiment = "neutral"
+            elif review == 's':
+                pass
             elif sentence_kind == 'q':
                 save_classifcations()
                 exit()
-    
+
+            for classification in classifications:
+                if classification[1] == 'review':
+                    print "Adding sent: " + review_sentiment
+                    print classification[0]
+                    sentiment_training.append((classification[0], review_sentiment))
+
+
     save_classifcations()
