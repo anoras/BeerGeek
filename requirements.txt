@@ -1,3 +1,7 @@
 service_identity
 scrapy
 readability-lxml
+nltk
+numpy
+beautifulsoup4
+termcolor
