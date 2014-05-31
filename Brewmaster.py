@@ -81,8 +81,6 @@ with open('data/beer-review-pages.json', 'r') as f:
 
             for classification in classifications:
                 if classification[1] == 'review':
-                    print "Adding sent: " + review_sentiment
-                    print classification[0]
                     sentiment_training.append((classification[0], review_sentiment))
 
 
