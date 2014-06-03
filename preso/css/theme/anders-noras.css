@@ -15,7 +15,7 @@ body {
     background-color: white; }
 
 .reveal {
-    font-family: "Lato", sans-serif;
+    font-family: 'Roboto', sans-serif !important;
     font-size: 36px;
     font-weight: normal;
     letter-spacing: -0.02em;
@@ -191,4 +191,102 @@ td {
 .an {
     font-family: 'Roboto', sans-serif !important;
     color: red !important;
+}
+.helv {
+    font-family: 'Helvetica Neue', sans-serif !important;
+    color: red !important;
+}
+
+figure, figcaption {
+    display: block;
+}
+.polaroid{
+    position: absolute;
+    top: -240px;
+    left: 20%;
+    width:100%;
+    overflow:hidden;
+}
+.polaroid figure{
+    width:506px;
+    margin:10px 20px;
+    padding: 6px 8px 10px 8px;
+    -webkit-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+    -moz-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+    box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+    background: #eee6d8;
+    background: -webkit-linear-gradient(top, #ede1ed, #fef8fe 20%, #f2ebde 60%);
+    background: -moz-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+    background: -o-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+    background: -ms-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+    background: linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+    -webkit-transform:rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+    -webkit-backface-visibility:hidden; /*prevent rotated text being jagged in Chrome and Safari*/
+}
+.polaroid figure:nth-child(even) {
+    -webkit-transform:rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    transform: rotate(2deg);
+    -webkit-backface-visibility:hidden; /*prevent rotated text being jagged in Chrome and Safari*/
+    -webkit-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+    -moz-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+    box-shadow: -4px 4px 8px -4px rgba(0, 0, 0, .75);
+}
+.polaroid figure:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left:5px;
+    top: -15px;
+    width: 75px;
+    height: 25px;
+    background-color: rgba(222,220,198,0.7);
+    -webkit-transform: rotate(-12deg);
+    -moz-transform: rotate(-12deg);
+    -o-transform: rotate(-12deg);
+    -ms-transform: rotate(-12deg);
+}
+.polaroid figure:nth-child(even):before {
+    left:150px;
+    top: -15px;
+    width: 55px;
+    height: 25px;
+    -webkit-transform: rotate(12deg);
+    -moz-transform: rotate(12deg);
+    -o-transform: rotate(12deg);
+    -ms-transform: rotate(12deg);
+}
+.polaroid figcaption{
+    text-align:center;
+    font-family:'Shadows Into Light', cursive;
+    font-size:1.3em;
+    color:darkblue;
+    letter-spacing:0.09em;
+}
+
+.browser {
+    position: relative;
+    left: 150px;
+    width: 640px;
+    height: 529px;
+    background-image: url(../../netscape.png);
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+}
+.browser iframe {
+    position: relative;
+    top: 128px;
+    left: 0px;
+    width: 634px;
+    height: 401px;
+    max-height: 401px;
+    max-width: 640px;
 }
